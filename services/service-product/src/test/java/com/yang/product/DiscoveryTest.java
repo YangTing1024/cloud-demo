@@ -39,7 +39,6 @@ public class DiscoveryTest {
                 }
             }
     }
-
     /**
      * 服务发现：discoveryClient方式
      */
