@@ -1,7 +1,7 @@
 package com.yang.product.controller;
 
+import com.yang.prodect.domain.Product;
 import com.yang.product.service.ProductService;
-import com.yang.product.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

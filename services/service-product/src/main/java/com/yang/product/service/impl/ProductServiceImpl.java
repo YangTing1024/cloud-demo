@@ -1,6 +1,6 @@
 package com.yang.product.service.impl;
 
-import com.yang.product.domain.Product;
+import com.yang.prodect.domain.Product;
 import com.yang.product.service.ProductService;
 import org.springframework.stereotype.Service;
 

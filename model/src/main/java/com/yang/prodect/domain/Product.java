@@ -1,4 +1,4 @@
-package com.yang.product.domain;
+package com.yang.prodect.domain;
 
 import lombok.Data;
 

@@ -1,5 +1,6 @@
 package com.yang.order.domain;
 
+import com.yang.prodect.domain.Product;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -21,6 +22,6 @@ public class Order {
 
     private String address;
 
-    private List<Object> productList;
+    private List<Product> productList;
 
 }

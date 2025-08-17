@@ -16,6 +16,7 @@
     <description>cloud-demo</description>
     <modules>
         <module>services</module>
+        <module>model</module>
     </modules>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

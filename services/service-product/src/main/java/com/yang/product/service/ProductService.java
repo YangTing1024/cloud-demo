@@ -1,6 +1,7 @@
 package com.yang.product.service;
 
-import com.yang.product.domain.Product;
+
+import com.yang.prodect.domain.Product;
 
 /*
  * @Description: TODO
