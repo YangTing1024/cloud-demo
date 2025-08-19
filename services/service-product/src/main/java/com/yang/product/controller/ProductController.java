@@ -20,6 +20,7 @@ public class ProductController {
 
     @GetMapping("/product/{id}")
     public Product getProductById(@PathVariable("id") Long productId){
+        System.out.println("ProductController.getProductById");
         return productService.getProductById(productId);
     }
 
