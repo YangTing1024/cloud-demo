@@ -1,8 +1,13 @@
+server:
+  port: 8000
 spring:
   application:
     name: service-order
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
-server:
-  port: 8000
+  config:
+    import: nacos:Order-config.yaml
+order:
+  name: 订单服务
+  time-out: 60min
