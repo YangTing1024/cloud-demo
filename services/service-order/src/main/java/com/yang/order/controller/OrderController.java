@@ -34,7 +34,7 @@ public class OrderController {
     @GetMapping("/config")
     public String getConfig() {
         return "time-out: " + orderProperties.getTimeOut() + " , startTime: " + orderProperties.getStartTime()
-                + " , name: " + orderProperties.getName();
+                + " , name: " + orderProperties.getName() + " , des: " + orderProperties.getDes();
     }
 
     @GetMapping("/create")

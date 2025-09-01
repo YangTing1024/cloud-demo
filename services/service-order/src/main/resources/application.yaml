@@ -1,13 +1,39 @@
 server:
   port: 8000
 spring:
+  profiles:
+    active: dev
   application:
     name: service-order
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
+      config:
+        namespace: ${spring.profiles.active:public}
+
+---
+spring:
   config:
-    import: nacos:Order-config.yaml
-order:
-  name: 订单服务
-  time-out: 60min
+    import:
+      - nacos:common.yaml?group=order
+      - nacos:dev.yaml?group=order
+    activate:
+      on-profile: dev
+
+---
+spring:
+  config:
+    import:
+      - nacos:common.yaml?group=order
+      - nacos:test.yaml?group=order
+    activate:
+      on-profile: test
+
+---
+spring:
+  config:
+    import:
+      - nacos:common.yaml?group=order
+      - nacos:prod.yaml?group=order
+    activate:
+      on-profile: prod

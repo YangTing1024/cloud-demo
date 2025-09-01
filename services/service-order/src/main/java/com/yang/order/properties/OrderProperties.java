@@ -19,4 +19,6 @@ public class OrderProperties {
     private String startTime;
 
     private String name;
+
+    private String des;
 }
