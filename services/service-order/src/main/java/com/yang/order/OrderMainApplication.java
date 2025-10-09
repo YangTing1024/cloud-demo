@@ -7,6 +7,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 import java.util.concurrent.Executor;
@@ -17,6 +18,7 @@ import java.util.concurrent.Executors;
  * @Author: YangTing
  * @Date: 2025/8/9 上午10:57
  **/
+@EnableFeignClients
 @SpringBootApplication
 public class OrderMainApplication {
 

@@ -1,6 +1,7 @@
 package com.yang.order.service.impl;
 
 import com.yang.order.domain.Order;
+import com.yang.order.feign.ProductFeignClient;
 import com.yang.order.service.OrderService;
 import com.yang.prodect.domain.Product;
 import lombok.extern.slf4j.Slf4j;
@@ -30,10 +31,13 @@ public class OrderServiceImpl implements OrderService {
     RestTemplate restTemplate;
     @Autowired
     LoadBalancerClient loadBalancerClient;
+    @Autowired
+    private ProductFeignClient productFeignClient;
 
     @Override
     public Order createOrder(Long productId, Long userId) {
-        Product product = getProductByIdRemoteWithLoadBalanceAnnotation(productId);
+//        Product product = getProductByIdRemoteWithLoadBalanceAnnotation(productId);
+        Product product = productFeignClient.getProductById(productId);
         Order order = new Order();
         order.setId(1L);
         //总金额
