@@ -5,6 +5,7 @@ import com.yang.product.service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.concurrent.TimeUnit;
 
 /*
  * @Description: TODO
@@ -19,6 +20,11 @@ public class ProductServiceImpl implements ProductService {
         product.setId(productId);
         product.setName("西瓜");
         product.setPrice(new BigDecimal(100));
+        try {
+            TimeUnit.SECONDS.sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         product.setNum(7);
         return product;
     }

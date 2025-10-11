@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /*
- * @Description: TODO
+ * @Description: 远程调用自己服务
  * @Author: YangTing
  * @Date: 2025/10/9 上午8:25
  **/
