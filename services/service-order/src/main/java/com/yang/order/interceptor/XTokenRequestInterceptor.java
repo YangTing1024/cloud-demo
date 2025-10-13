@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 /*
- * @Description: TODO
+ * @Description: Openfeign请求拦截器
  * @Author: YangTing
  * @Date: 2025/10/11 上午8:33
  **/

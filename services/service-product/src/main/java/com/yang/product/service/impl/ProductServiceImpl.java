@@ -20,11 +20,11 @@ public class ProductServiceImpl implements ProductService {
         product.setId(productId);
         product.setName("西瓜");
         product.setPrice(new BigDecimal(100));
-        try {
-            TimeUnit.SECONDS.sleep(100);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            TimeUnit.SECONDS.sleep(100);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         product.setNum(7);
         return product;
     }
