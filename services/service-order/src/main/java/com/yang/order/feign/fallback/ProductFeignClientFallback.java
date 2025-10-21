@@ -16,6 +16,7 @@ public class ProductFeignClientFallback implements ProductFeignClient {
 
     @Override
     public Product getProductById(Long productId) {
+        System.out.println("兜底回调......");
         Product product = new Product();
         product.setId(productId);
         product.setName("默认商品");
