@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+#         - id: baiDu
+#           uri: https://www.baidu.com/
+#           predicates:
+#             - name: Path
+#               args:
+#                 patterns: /s
+#             - name: Query
+#               args:
+#                 param: wd
+#                 regexp: haha
+#             - Vip=user,YangTing
+#           order: 10
+         - id: service-order
+           uri: lb://service-order
+           predicates:
+             - Path=/api/order/**
+           filters:
+             - RewritePath=/api/order/?(?<segment>.*),/$\{segment}
+             - AddResponseHeader=X-Response-Abc,123
+#           order: 4
+         - id: service-product
+           uri: lb://service-product
+           predicates:
+             - Path=/api/product/**
+           filters:
+             - RewritePath=/api/product/?(?<segment>.*),/$\{segment}
+#           order: 6
+#         - id: baiDu
+#           uri: https://www.baidu.com
+#           predicates:
+#             Path=/**
+#           order: 1

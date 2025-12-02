@@ -17,6 +17,8 @@
     <modules>
         <module>services</module>
         <module>model</module>
+        <module>gateway</module>
+        <module>services/RocketMQ</module>
     </modules>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
